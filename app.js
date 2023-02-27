@@ -1,3 +1,18 @@
+// this is the menu array
+// in the menu array i have a bunch of objects
+// normally i wouls get the data externally not locally like i have down below.
+
+// i get the data
+// iterate over the data and decide what i want to display
+// decide what kind of functionaility
+
+// but the intial setup will be alittle diffrent once i learn AJAX.
+// I WILL BE ABLE TO SETUP DATA REQUESTS AND GET DATA.
+
+// I HAVE NOT COVERED THAT YET
+
+// FIRST I NEED TO LEARN HOW TO DISPLAY ITEMS ON A SCREEN BECAUSE IT IS IMPORTANT IN JAVASCRIPT
+
 const menu = [
   {
     id: 1,
@@ -72,3 +87,9 @@ const menu = [
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
 ];
+
+
+
+
+
+
