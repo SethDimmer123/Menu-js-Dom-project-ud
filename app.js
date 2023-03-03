@@ -104,14 +104,20 @@ return `        <article class="menu-item">
     <h4>${item.title}</h4>
     <h4 class="price">$${item.price}</h4>
   </header>
-  <p class="item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt sit aliquam soluta nobis, quidem quibusdam libero! Quam commodi architecto iste!</p>
+  <p class="item-text">${item.desc}</p>
 </div>
-</article>`;// i created the html to return everything i have in my single item(menu-item)
+</article>`;
+// i created the html to return everything i have in my single item(menu-item)
 // i modified what was in the array
 // return item
 /**looped over the array (iterated) then just said ok return the same item  */
 })
-console.log(displayMenu)
+displayMenu = displayMenu.join("");
+sectionCenter.innerHTML = displayMenu
+//i am using the let variable which means i can OVERIDE IT(CHANGE) the displayMenu 
+// I ADD .join method to turn the array in the console INTO A STRING(12:34)
+// console.log(displayMenu)
+// (13:02) since i have my big giant string i now add as my DATA.(LINE 116) by using innerHTML property
 });
 // i setup map method and i need to iterate over the items and add html and place the array of objects
 // in the html.
@@ -126,6 +132,28 @@ console.log(displayMenu)
 // HOW DO I DO THAT?
 
 // i start accessing the variables and properties in my object
+
+
+// review of everything above
+
+// i have some kind of items(array of objects)
+
+// i have to iterate over items
+
+// decide what i want to return (what kind of info)
+
+// for example the section-center specific html (line 100-109)
+
+// then i joined everything together.join("")
+
+// then placed it in the parent element 
+// (section-center)
+
+// the i used innerHTML property (line 116)
+
+// then i assigned it to whatever i got back once i ran the 
+// join method on my array.
+// = displaMenu
 
 
 
