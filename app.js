@@ -96,29 +96,30 @@ const menu = [
 const sectionCenter = document.querySelector(".section-center")// i am accessing the section-center element
 
 window.addEventListener("DOMContentLoaded",function (){// in the browser window i want my content to load right away.
-let displayMenu = menu.map(function(item){
-return `        <article class="menu-item">
-<img src=${item.img} class="photo" alt=${item.title} />
-<div class="item-info">
-  <header>
-    <h4>${item.title}</h4>
-    <h4 class="price">$${item.price}</h4>
-  </header>
-  <p class="item-text">${item.desc}</p>
-</div>
-</article>`;
+// let displayMenu = menuItems.map(function(item){
+  displayMenuItems(menu)// passing in my menu array
+// return `        <article class="menu-item">
+// <img src=${item.img} class="photo" alt=${item.title} />
+// <div class="item-info">
+//   <header>
+//     <h4>${item.title}</h4>
+//     <h4 class="price">$${item.price}</h4>
+//   </header>
+//   <p class="item-text">${item.desc}</p>
+// </div>
+// </article>`;
 // i created the html to return everything i have in my single item(menu-item)
 // i modified what was in the array
 // return item
 /**looped over the array (iterated) then just said ok return the same item  */
 })
-displayMenu = displayMenu.join("");
-sectionCenter.innerHTML = displayMenu
+// displayMenu = displayMenu.join("");
+// sectionCenter.innerHTML = displayMenu;
 //i am using the let variable which means i can OVERIDE IT(CHANGE) the displayMenu 
 // I ADD .join method to turn the array in the console INTO A STRING(12:34)
 // console.log(displayMenu)
 // (13:02) since i have my big giant string i now add as my DATA.(LINE 116) by using innerHTML property
-});
+// });
 // i setup map method and i need to iterate over the items and add html and place the array of objects
 // in the html.
 // MAP METHOD lets me MODIFY MY ARRAY
@@ -153,7 +154,70 @@ sectionCenter.innerHTML = displayMenu
 
 // then i assigned it to whatever i got back once i ran the 
 // join method on my array.
-// = displaMenu
+// = displayMenu
+
+
+
+
+// VID.153 refactoring what is above
+// i am setting up filtering to not REPEAT MYSELF i would just need to place 
+// all of the functionaility in a function in order to setup filtering
+// it would make sense if i set up the functionaility in a function.
+// so i don't have to retype what is above
+
+// as a parameter in a function ill pass in the array(menuItems).
+
+// then grab everything that is inside the callback function(line 99 to line 116)
+
+
+
+function displayMenuItems(menuItems) {
+  let displayMenu = menu.map(function(item){
+    return `        <article class="menu-item">
+    <img src=${item.img} class="photo" alt=${item.title} />
+    <div class="item-info">
+      <header>
+        <h4>${item.title}</h4>
+        <h4 class="price">$${item.price}</h4>
+      </header>
+      <p class="item-text">${item.desc}</p>
+    </div>
+    </article>`;
+    });
+    displayMenu = displayMenu.join("");
+    sectionCenter.innerHTML = displayMenu;
+}
+
+// next on line 99 i want to change instead of iterating over the menu array.
+
+//  I want to iterate over the array that will pass in the function.
+
+// (that means on line 99) i add the word Items to the menu.map array
+// so its now menuItems.map array
+
+// then i call my function in the DOMContentLoaded event listener
+// displayMenuItems(menu)(line 100)
+// i still pass in my menu array.
+
+// MY FUNCTIONAILITY STILL WORKS WHICH MEANS EVERYTHING STAYS THE SAME.
+// THE DIFFERENCE IS I CAN SETUP FILTERING AND BY REFACTORING AND ADDING THE FUNCTION
+// IT WILL BE EASIER.
+
+// BECAUSE I WILL HAVE MY FUNCTION AND DEPENDING ON THE SITUATION
+// I WILL CALL MY FUNCTION AND I WILL NOT HAVE TO RETYPE WHAT IS IN MY
+// displayMenu function.
+
+// it will be a faster setup.
+
+// for references in basic.js is the previous code from vid 152.
+// incase i get confused also just rewatch the vids
+
+
+
+
+
+
+
 
 
 
