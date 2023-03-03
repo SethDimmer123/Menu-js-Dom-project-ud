@@ -88,6 +88,44 @@ const menu = [
   },
 ];
 
+//  i start by selecting the section-center(parent element) 
+// because the DOMContentLoaded was one of the events that
+// i already used in the previous project(reviews js) where i had window add event listener
+// (WHEN MY PAGE LOADS) then i had a callback function 
+
+const sectionCenter = document.querySelector(".section-center")// i am accessing the section-center element
+
+window.addEventListener("DOMContentLoaded",function (){// in the browser window i want my content to load right away.
+let displayMenu = menu.map(function(item){
+return `        <article class="menu-item">
+<img src=${item.img} class="photo" alt=${item.title} />
+<div class="item-info">
+  <header>
+    <h4>${item.title}</h4>
+    <h4 class="price">$${item.price}</h4>
+  </header>
+  <p class="item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt sit aliquam soluta nobis, quidem quibusdam libero! Quam commodi architecto iste!</p>
+</div>
+</article>`;// i created the html to return everything i have in my single item(menu-item)
+// i modified what was in the array
+// return item
+/**looped over the array (iterated) then just said ok return the same item  */
+})
+console.log(displayMenu)
+});
+// i setup map method and i need to iterate over the items and add html and place the array of objects
+// in the html.
+// MAP METHOD lets me MODIFY MY ARRAY
+
+
+// (10:10) FROM LINE 100 TO 109 I AM returning the whole hardcoded <article>
+
+// what do i need to do now?
+
+// I NEED TO MAKE IT (DYNAMIC)
+// HOW DO I DO THAT?
+
+// i start accessing the variables and properties in my object
 
 
 
