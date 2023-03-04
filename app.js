@@ -114,7 +114,13 @@ window.addEventListener("DOMContentLoaded",function (){// in the browser window 
     }
     return values
   },['all'])
-  console.log(categories)
+  const categoryBtns = categories.map(function(category){
+    return`<button class="filter-btn" type="button"
+     data-id=${category}>
+     ${category}
+     </button>`
+  })
+  // console.log(categories)
 // return `        <article class="menu-item">
 // <img src=${item.img} class="photo" alt=${item.title} />
 // <div class="item-info">
@@ -307,13 +313,22 @@ filterBtns.forEach(function(btn){// i am iterating over each and every button.
 
 
 
-// ============================================================
+
+
+
+
+
+
+
+
+
+// ==============================================================================================
 // VID 157. Unique Categories
 
 // I SETUP THE BUTTONS DYNAMICALLY IN THE DOMContentLoaded event listener.
 
 // right after i display the items displayMenuItems(menu)
-// i setup the functionality line 111
+// i setup the functionality (line 111)
 
 
 // get only unique categories- HARDEST PART
@@ -326,15 +341,19 @@ filterBtns.forEach(function(btn){// i am iterating over each and every button.
 
 // so now i want to store it in the categories array since the map method returns a 
 // NEW ARRAY
+
+
+
+
 // THIS ALL GETS DELETED AND REPLACED WITH REDUCE METHOD(2:45)
-// const categories = menu.map(function(item){
+// const categories = menu.map(function(item){ (LINE 111)
   // return item.category
 // })
 // console.log(categories)
 
 
 
-// IN THE CONSOLE I SHOULD HAVE 10 ITEMS IN MY ARRAY  BECUASE I HAVE 10 CATEGORIES
+// IN THE CONSOLE I SHOULD HAVE 10 ITEMS IN MY ARRAY BECUASE I HAVE 10 CATEGORIES
 
 // BUT NOW I WANT TO GET UNIQUE CATEGORIES (VERY IMPORTANT)
 
@@ -359,7 +378,7 @@ filterBtns.forEach(function(btn){// i am iterating over each and every button.
 // the reason i am returning an array and placing the string of 'all' in it
 // because i have a button that references all of the items.(LINE 113)
 
-// i adD it manually becuase it is not in my categories
+// i adDdit manually becuase it is not in my categories
 
 // then i have 2 parameters in my reduce 
 // they are referenced as accumulator and current 
@@ -401,10 +420,36 @@ filterBtns.forEach(function(btn){// i am iterating over each and every button.
 // IN THE CONSOLE AT THIS POINT (5:45) I AM GETTING ALL MY (OBJECT)ITEM CATEGORIES
 // ["all","breakfast","lunch","dinner"]
 
+// ====================================================================================
 
-
+// VID 158. Dynamic FIlter Buttons Complete.
 
 // iterate over the categories return buttons
 // make sure to select buttons when they are available.
+
+//  I WILL NOW THE CATEGORIES AS MY BUTTONS
+
+// it will be similar to what i did with menuItems (line 197.)
+// where i had an array then iterated over the array grabbed the html
+// and DYNAMICALLY PLUGGED THE VALUES
+
+// I NEED TO COME UP WITH A NAME OF WHAT I WILL BE RETURNING.
+
+// const categoryBtns = categories.map(function(category){ 
+  // i REFERENCE EACH AND EVERY ITEM AS A CATEGORY.
+
+  // instead of returning a string
+  // i wrap my category value in the html.
+  // and return a button i use 1 of the html for the button
+  // return `<button class="filter-btn" type="button" data-id="breakfast">breakfast</button>`(LINE 118)
+// })
+
+
+
+
+
+
+
+
 
 
