@@ -242,10 +242,19 @@ filterBtns.forEach(function(btn){// i am iterating over each and every button.
     // a attribute with a data prefix. 
     // example: line 27 in index.html. data i can call it whatever i want (id)
   const menuCategory = menu.filter(function(menuItem){
-    return menuItem
+    // console.log(menuItem.category);
+    if(menuItem.category === category) {
+      return menuItem
+    }
     // return if the item matches whatever i have in the category
   })
-
+  // console.log(menuCategory);
+  if(category === "all"){
+    displayMenuItems(menu)
+  }
+  else{
+    displayMenuItems(menuCategory)
+  }
   })
 })
 
