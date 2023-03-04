@@ -87,6 +87,14 @@ const menu = [
     img: "./images/item-9.jpeg",
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
+  // {
+  //   id: 10,
+  //   title: "steak dinner",
+  //   category:"dinner",
+  //   price: 39.99,
+  //   img: "./images/item-10.jpeg",
+  //   desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+  // },
 ];
 
 //  i start by selecting the section-center(parent element) 
@@ -99,7 +107,7 @@ const sectionCenter = document.querySelector(".section-center")// i am accessing
 window.addEventListener("DOMContentLoaded",function (){// in the browser window i want my content to load right away.(DOMContentLoaded)
 // let displayMenu = menuItems.map(function(item){
   displayMenuItems(menu)// passing in my menu array
-// return `        <article class="menu-item">
+  // return `        <article class="menu-item">
 // <img src=${item.img} class="photo" alt=${item.title} />
 // <div class="item-info">
 //   <header>
@@ -124,6 +132,7 @@ window.addEventListener("DOMContentLoaded",function (){// in the browser window 
 // i setup map method and i need to iterate over the items and add html and place the array of objects
 // in the html.
 // MAP METHOD lets me MODIFY MY ARRAY
+
 
 
 // (10:10) FROM LINE 100 TO 109 I AM returning the whole hardcoded <article>
@@ -159,8 +168,6 @@ window.addEventListener("DOMContentLoaded",function (){// in the browser window 
 
 
 
-
-
 // ==================================================================================
 
 
@@ -175,11 +182,9 @@ window.addEventListener("DOMContentLoaded",function (){// in the browser window 
 
 // then grab everything that is inside the callback function(line 99 to line 116)
 
-
-
 function displayMenuItems(menuItems) {
-  let displayMenu = menu.map(function(item){
-    return `        <article class="menu-item">
+  let displayMenu = menuItems.map(function (item) {
+    return ` <article class="menu-item">
     <img src=${item.img} class="photo" alt=${item.title} />
     <div class="item-info">
       <header>
@@ -218,54 +223,23 @@ function displayMenuItems(menuItems) {
 // for references in basic.js is the previous code from vid 152.
 // incase i get confused also just rewatch the vids
 
+const filterBtns = document.querySelectorAll(".filter-btn");
+// console.log(filterBtns);
 
-
-// ==============================================================================================
-
-// vid 155. FILTERING BUTTONS JS
-// NOW I NEED TO SETUP THE FUNCTIONAILITY WHEN I CLICK ON THE BUTTONS 
-// I DISPLAY SPECIFIC ITEMS.
-
-// i need to select my filter buttons.
-
-const filterBtns = document.querySelectorAll('.filter-btn')
-
-/**i want to listen for the event for the buttons
- * THEN iterate over them for each and every one
- */
-
-filterBtns.forEach(function(btn){// i am iterating over each and every button.
-  btn.addEventListener('click',function(e){
+filterBtns.forEach(function (btn) {
+  btn.addEventListener("click", function (e) {
+    // console.log(e.currentTarget.dataset);
     const category = e.currentTarget.dataset.id;
-    // current target means the button i am clicking on.
-    // the way the dataset property works is on the element we can add 
-    // a attribute with a data prefix. 
-    // example: line 27 in index.html. data i can call it whatever i want (id)
-  const menuCategory = menu.filter(function(menuItem){
-    // console.log(menuItem.category);
-    if(menuItem.category === category) {
-      return menuItem
+    const menuCategory = menu.filter(function (menuItem) {
+      // console.log(menuItem.category);
+      if (menuItem.category === category) {
+        return menuItem;
+      }
+    });
+    if (category === "all") {
+      displayMenuItems(menu);
+    } else {
+      displayMenuItems(menuCategory);
     }
-    // return if the item matches whatever i have in the category
-  })
-  // console.log(menuCategory);
-  if(category === "all"){
-    displayMenuItems(menu)
-  }
-  else{
-    displayMenuItems(menuCategory)
-  }
-  })
-})
-
-
-// once i have assigned the id of the dataset to each label i put each 
-// and every button in a variable.
-
-
-// (6:34) now i use the filter array where i can filter out what 
-// items are going to be left in the new array.
-// i can filter out the array depending on what the value for my category is.
-// create a new array LINE 248
-
-
+  });
+});
