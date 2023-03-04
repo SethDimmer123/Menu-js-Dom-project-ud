@@ -1,3 +1,4 @@
+// VID 152.
 // this is the menu array
 // in the menu array i have a bunch of objects
 // normally i wouls get the data externally not locally like i have down below.
@@ -159,6 +160,11 @@ window.addEventListener("DOMContentLoaded",function (){// in the browser window 
 
 
 
+
+// ==================================================================================
+
+
+
 // VID.153 refactoring what is above
 // i am setting up filtering to not REPEAT MYSELF i would just need to place 
 // all of the functionaility in a function in order to setup filtering
@@ -214,10 +220,14 @@ function displayMenuItems(menuItems) {
 
 
 
+// ==============================================================================================
 
+// vid 155. FILTERING BUTTONS JS
+// NOW I NEED TO SETUP THE FUNCTIONAILITY WHEN I CLICK ON THE BUTTONS I DISPLAY SPECIFIC ITEMS.
 
+// i need to select my filter buttons.
 
-
+const filterBtns = document.querySelectorAll('.filter-btn')
 
 
 
