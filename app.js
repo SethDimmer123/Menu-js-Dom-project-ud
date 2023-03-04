@@ -234,6 +234,8 @@ const filterBtns = document.querySelectorAll('.filter-btn')
  * THEN iterate over them for each and every one
  */
 
+
+// filtering items
 filterBtns.forEach(function(btn){// i am iterating over each and every button.
   btn.addEventListener('click',function(e){
     const category = e.currentTarget.dataset.id;
@@ -247,23 +249,26 @@ filterBtns.forEach(function(btn){// i am iterating over each and every button.
       return menuItem
     }
     // return if the item matches whatever i have in the category
+    // once i have assigned the id of the dataset to each label i put each 
+    // and every button in a variable.
+    
+    
+    // (6:34) now i use the filter array where i can filter out what 
+    // items are going to be left in the new array.
+    // i can filter out the array depending on what the value for my category is.
+    // create a new array LINE 248
   })
   // console.log(menuCategory);
+  // all button down below
   if(category === "all"){
-    displayMenuItems(menu)
+    displayMenuItems(menu)//if the category is all i will display my menu items with my MENU array
+    // (the original array) menu line 17
   }
   else{
-    displayMenuItems(menuCategory)
+    displayMenuItems(menuCategory)//however if the category is not all but
+    // breakfast,lunch,or shakes then i will run displayMenuItems(menuCategory)
+    // SINCE THAT IS MY NEW ARRAY.
   }
   })
 })
 
-
-// once i have assigned the id of the dataset to each label i put each 
-// and every button in a variable.
-
-
-// (6:34) now i use the filter array where i can filter out what 
-// items are going to be left in the new array.
-// i can filter out the array depending on what the value for my category is.
-// create a new array LINE 248
