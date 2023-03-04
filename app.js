@@ -96,7 +96,7 @@ const menu = [
 
 const sectionCenter = document.querySelector(".section-center")// i am accessing the section-center element
 
-window.addEventListener("DOMContentLoaded",function (){// in the browser window i want my content to load right away.
+window.addEventListener("DOMContentLoaded",function (){// in the browser window i want my content to load right away.(DOMContentLoaded)
 // let displayMenu = menuItems.map(function(item){
   displayMenuItems(menu)// passing in my menu array
 // return `        <article class="menu-item">
@@ -223,13 +223,40 @@ function displayMenuItems(menuItems) {
 // ==============================================================================================
 
 // vid 155. FILTERING BUTTONS JS
-// NOW I NEED TO SETUP THE FUNCTIONAILITY WHEN I CLICK ON THE BUTTONS I DISPLAY SPECIFIC ITEMS.
+// NOW I NEED TO SETUP THE FUNCTIONAILITY WHEN I CLICK ON THE BUTTONS 
+// I DISPLAY SPECIFIC ITEMS.
 
 // i need to select my filter buttons.
 
 const filterBtns = document.querySelectorAll('.filter-btn')
 
+/**i want to listen for the event for the buttons
+ * THEN iterate over them for each and every one
+ */
+
+filterBtns.forEach(function(btn){// i am iterating over each and every button.
+  btn.addEventListener('click',function(e){
+    const category = e.currentTarget.dataset.id;
+    // current target means the button i am clicking on.
+    // the way the dataset property works is on the element we can add 
+    // a attribute with a data prefix. 
+    // example: line 27 in index.html. data i can call it whatever i want (id)
+  const menuCategory = menu.filter(function(menuItem){
+    return menuItem
+    // return if the item matches whatever i have in the category
+  })
+
+  })
+})
 
 
+// once i have assigned the id of the dataset to each label i put each 
+// and every button in a variable.
+
+
+// (6:34) now i use the filter array where i can filter out what 
+// items are going to be left in the new array.
+// i can filter out the array depending on what the value for my category is.
+// create a new array LINE 248
 
 
