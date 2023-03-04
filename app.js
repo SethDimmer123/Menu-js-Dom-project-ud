@@ -87,6 +87,15 @@ const menu = [
     img: "./images/item-9.jpeg",
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
+  {
+    id: 10,
+    title: "Steak dinner",
+    category: "dinner",
+    price: 39.99,
+    img: "./images/item-10.jpeg",
+    desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+  }
+
 ];
 
 //  i start by selecting the section-center(parent element) 
@@ -99,6 +108,13 @@ const sectionCenter = document.querySelector(".section-center")// i am accessing
 window.addEventListener("DOMContentLoaded",function (){// in the browser window i want my content to load right away.(DOMContentLoaded)
 // let displayMenu = menuItems.map(function(item){
   displayMenuItems(menu)// passing in my menu array
+  const categories = menu.reduce(function(values,item){
+    if(!values.includes(item.category)){
+      values.push(item.category);
+    }
+    return values
+  },['all'])
+  console.log(categories)
 // return `        <article class="menu-item">
 // <img src=${item.img} class="photo" alt=${item.title} />
 // <div class="item-info">
@@ -271,4 +287,124 @@ filterBtns.forEach(function(btn){// i am iterating over each and every button.
   }
   })
 })
+
+
+
+
+// ===================================================================================
+
+// VID 156. Dynamically filter buttons
+
+// COMMENT OUT THE BUTTONS IN index.html.
+// ALSO COMMENTED OUT THE CODE INSIDE THE ARTICLE TAGS BECAUSE THAT IS IN JAVASCRIPT.
+
+// if i add another object to the menu it only shows up in the all category which is not good.
+
+
+// get only unique categories- HARDEST PART
+// iterate over the categories return buttons
+// make sure to select buttons when they are available.
+
+
+
+// ============================================================
+// VID 157. Unique Categories
+
+// I SETUP THE BUTTONS DYNAMICALLY IN THE DOMContentLoaded event listener.
+
+// right after i display the items displayMenuItems(menu)
+// i setup the functionality line 111
+
+
+// get only unique categories- HARDEST PART
+
+// display the categories const categories (LINE 111)
+// start by using map-method
+// then  i want to iterate over my menu array 
+// and return only the categories
+// each and every item has that property of categories
+
+// so now i want to store it in the categories array since the map method returns a 
+// NEW ARRAY
+// THIS ALL GETS DELETED AND REPLACED WITH REDUCE METHOD(2:45)
+// const categories = menu.map(function(item){
+  // return item.category
+// })
+// console.log(categories)
+
+
+
+// IN THE CONSOLE I SHOULD HAVE 10 ITEMS IN MY ARRAY  BECUASE I HAVE 10 CATEGORIES
+
+// BUT NOW I WANT TO GET UNIQUE CATEGORIES (VERY IMPORTANT)
+
+// OTHERWISE IF DISPLAY MY BUTTONS I ITERATE OVER THE CATEGORIES AND RETURN MY BUTTONS
+// THEN I WILL HAVE 10 BUTTONS
+// WHICH I DO NOT WANT.
+
+//  i only want buttons for UNIQUE CATEGORIES
+
+// HOW DO I DO THAT?
+// I USE .reduce method
+
+
+// const  categories = menu.reduce(function)(){
+
+// },['all])
+
+// the difference with reduce compared to map and filter method is i have
+// 2 PARAMETERS IN MY CALLBACK FUNCTION AND SOME KIND OF INITIAL VALUE[]
+// 'ARRAY'
+
+// the reason i am returning an array and placing the string of 'all' in it
+// because i have a button that references all of the items.(LINE 113)
+
+// i adD it manually becuase it is not in my categories
+
+// then i have 2 parameters in my reduce 
+// they are referenced as accumulator and current 
+// but  it is a parameter so i can call it whatever i want
+
+// i call the 1st parameter values becuase it references the ARRAY 
+// i am returning ['all']
+
+// the second parameter is item because it references each and every item
+// in the array because i am still iterating over each item(object) in my menu array.
+
+// const  categories = menu.reduce(function)(values,item){
+  // return values
+// },['all])
+
+
+// WHEN USING REDUCE METHOD I NEED TO RETURN THE VALUES which is my total
+// if i dont return values the functionaiulity i have been doing will not work.
+
+
+// NOW I WANT TO CHECK if the item category(property with the value) if it is
+// ALREADY IN MY ARRAY.
+
+// values IS MY ARRAY
+
+// const  categories = menu.reduce(function)(values,item){
+  // if(!values.includes(item.category)){ //if my values array does not include 
+  // item.category(array of objects)
+    // values.push(item.category)
+    // IF THE IF STATEMENT IS TRUE THEN I WANT TO PUSH THE item.category
+  // }
+
+// if the values array DOES include the item.category(array of objects) then
+// just return the the array.
+
+  // return values
+// },['all])
+
+// IN THE CONSOLE AT THIS POINT (5:45) I AM GETTING ALL MY (OBJECT)ITEM CATEGORIES
+// ["all","breakfast","lunch","dinner"]
+
+
+
+
+// iterate over the categories return buttons
+// make sure to select buttons when they are available.
+
 
