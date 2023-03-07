@@ -113,14 +113,17 @@ window.addEventListener("DOMContentLoaded",function (){// in the browser window 
       values.push(item.category);
     }
     return values
-  },['all'])
+  },['all']
+  );
   const categoryBtns = categories.map(function(category){
     return`<button class="filter-btn" type="button"
      data-id=${category}>
      ${category}
      </button>`
-  }
-  );
+  })
+  .join("");
+  container.innerHTML = categoryBtns;
+  // console.log(categoryBtns);
   // console.log(categories) --got rid of this vid 158. 
 // return `        <article class="menu-item">
 // <img src=${item.img} class="photo" alt=${item.title} />
@@ -204,7 +207,7 @@ window.addEventListener("DOMContentLoaded",function (){// in the browser window 
 
 function displayMenuItems(menuItems) {
   let displayMenu = menuItems.map(function(item){
-    return `        <article class="menu-item">
+    return ` <article class="menu-item">
     <img src=${item.img} class="photo" alt=${item.title} />
     <div class="item-info">
       <header>
@@ -254,6 +257,8 @@ function displayMenuItems(menuItems) {
 // i need to select my filter buttons.
 
 const filterBtns = document.querySelectorAll('.filter-btn')
+const container = document.querySelector(".btn-container");// this for vid 158.
+// i selected my button container
 
 /**i want to listen for the event for the buttons
  * THEN iterate over them for each and every one
@@ -446,9 +451,59 @@ filterBtns.forEach(function(btn){// i am iterating over each and every button.
   // instead of returning a string
   // i wrap my category value in the html.
   // and return a button i use 1 of the html for the button
-  // return `<button class="filter-btn" type="button" data-id="breakfast">breakfast</button>`
+  // return `<button class="filter-btn" type="button" data-id="breakfast">
+  // breakfast</button>`
   // (LINE 118)
 // })
+
+// ONCE I HAVE MY CATEGORY BUTTONS SETUP
+
+// I NEED TO SET UP MY categoryBtns as a string because i still 
+// have every value in my array which i can just use join method
+
+// I HAVE MULTIPLE WAYS TO DO IT
+
+// 1. i can either do it long way (displayMenu = displayMenu.join(""))
+// i reassign display menu  to the join method (line 219)
+
+// I CANNOT DO IT THAT WAY BECAUSE I USED const which means i cannot reassign
+
+// const categoryBtns = categories.map(function(category){
+    // return `<button class="filter-btn" type="button" 
+    // data-id="breakfast">
+  // breakfast
+  // </button>`;
+// })
+// .join("");
+// i can add the join method just not reassign my const categoryBtns variable.
+
+// console.log(categoryBtns);
+// logging it to see my string that contains all of my buttons.
+
+// now i target my button container with a class of btn-container use html to add
+// my string so i will have my dynamic buttons.
+
+// const container = document.querySelector("btn-container");
+
+
+// const categoryBtns = categories.map(function(category){
+    // return `<button class="filter-btn" type="button" 
+    // data-id="breakfast">
+  // breakfast
+  // </button>`;
+// })
+// .join("");
+// container.innerHTML = categoryBtns;
+
+// i add innerHTML to set the HTML Contents in this case of the btn-container from the
+// html.
+
+// I NOW HAVE MY BUTTONS
+// ---------------------------------------------------
+
+
+
+
 
 
 
