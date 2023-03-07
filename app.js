@@ -131,6 +131,7 @@ window.addEventListener("DOMContentLoaded",function (){// in the browser window 
 //   <p class="item-text">${item.desc}</p>
 // </div>
 // </article>`;
+
 // i created the html to return everything i have in my single item(menu-item)
 // i modified what was in the array
 // return item
@@ -138,6 +139,7 @@ window.addEventListener("DOMContentLoaded",function (){// in the browser window 
 })
 // displayMenu = displayMenu.join("");
 // sectionCenter.innerHTML = displayMenu;
+
 //i am using the let variable which means i can OVERIDE IT(CHANGE) the displayMenu 
 // I ADD .join method to turn the array in the console INTO A STRING(12:34)
 // console.log(displayMenu)
