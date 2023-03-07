@@ -675,3 +675,7 @@ function displayMenuButtons(){
 
 // I NOW NEED TO INVOKE THE FUNCTION(
   // its in the DomContentLoaded function)
+
+
+
+  // THIS PROJECT IS VERY IMPORTANT!!!!!!!!!!
