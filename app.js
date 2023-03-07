@@ -7,7 +7,7 @@
 // iterate over the data and decide what i want to display
 // decide what kind of functionaility
 
-// but the intial setup will be alittle diffrent once i learn AJAX.
+// but the intial setup will be a little diffrent once i learn AJAX.
 // I WILL BE ABLE TO SETUP DATA REQUESTS AND GET DATA.
 
 // I HAVE NOT COVERED THAT YET
@@ -119,8 +119,9 @@ window.addEventListener("DOMContentLoaded",function (){// in the browser window 
      data-id=${category}>
      ${category}
      </button>`
-  })
-  // console.log(categories)
+  }
+  );
+  // console.log(categories) --got rid of this vid 158. 
 // return `        <article class="menu-item">
 // <img src=${item.img} class="photo" alt=${item.title} />
 // <div class="item-info">
@@ -429,13 +430,15 @@ filterBtns.forEach(function(btn){// i am iterating over each and every button.
 // iterate over the categories return buttons
 // make sure to select buttons when they are available.
 
-//  I WILL NOW THE CATEGORIES AS MY BUTTONS
+//  I WILL NOW ADD THE CATEGORIES AS MY BUTTONS
+// --------------=----------------------------
 
 // it will be similar to what i did with menuItems (line 197.)
 // where i had an array then iterated over the array grabbed the html
 // and DYNAMICALLY PLUGGED THE VALUES
 
 // I NEED TO COME UP WITH A NAME OF WHAT I WILL BE RETURNING.
+// - so i delted the console log on line 124.
 
 // const categoryBtns = categories.map(function(category){ 
   // i REFERENCE EACH AND EVERY ITEM AS A CATEGORY.
@@ -443,8 +446,14 @@ filterBtns.forEach(function(btn){// i am iterating over each and every button.
   // instead of returning a string
   // i wrap my category value in the html.
   // and return a button i use 1 of the html for the button
-  // return `<button class="filter-btn" type="button" data-id="breakfast">breakfast</button>`(LINE 118)
+  // return `<button class="filter-btn" type="button" data-id="breakfast">breakfast</button>`
+  // (LINE 118)
 // })
+
+
+
+
+
 
 
 
