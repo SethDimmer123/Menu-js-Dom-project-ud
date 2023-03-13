@@ -98,15 +98,24 @@ const menu = [
 
 ];
 
-//  i start by selecting the section-center(parent element) 
-// because the DOMContentLoaded was one of the events that
-// i already used in the previous project(reviews js) where i had window add event listener
-// (WHEN MY PAGE LOADS) then i had a callback function 
+/**
+ *  i start by selecting the section-center(parent element) 
+ * 
+ * because the DOMContentLoaded was one of the events that
+ * 
+ * 
+i already used in the previous project(reviews js) where i had window add event listener
 
-const sectionCenter = document.querySelector(".section-center")// i am accessing the section-center element
 
-window.addEventListener("DOMContentLoaded",function (){// in the browser window i want my content to load right away.(DOMContentLoaded)
-// let displayMenu = menuItems.map(function(item){
+(WHEN MY PAGE LOADS) then i had a callback function 
+ * 
+ * */
+const sectionCenter = document.querySelector(".section-center")//VID 152.
+// i am accessing the section-center element
+
+window.addEventListener("DOMContentLoaded",function (){ //VID 152.
+// in the browser window i want my content to load right away.(DOMContentLoaded)
+// let displayMenu = menuItems.map(function(item){     //VID 152.
   displayMenuItems(menu)// passing in my menu array
   displayMenuButtons();
   // const categories = menu.reduce(function(values,item){
@@ -161,11 +170,10 @@ window.addEventListener("DOMContentLoaded",function (){// in the browser window 
   //       }
   //     })
   //   })
-    // EVERYTHING ENDING WITH ARTICLE IS 
-    // BEFORE LINE 158 FIGURE OUT WHAT VID IF I COME BACK TO THIS LATER.
-    // =============================================================================
   // console.log(categoryBtns);
   // console.log(categories) --got rid of this vid 158. 
+  
+  // THIS IS FROM VID 152.
 // return `        <article class="menu-item">
 // <img src=${item.img} class="photo" alt=${item.title} />
 // <div class="item-info">
@@ -176,23 +184,28 @@ window.addEventListener("DOMContentLoaded",function (){// in the browser window 
 //   <p class="item-text">${item.desc}</p>
 // </div>
 // </article>`;
+// ======================================================================================
 
-// i created the html to return everything i have in my single item(menu-item)
-// i modified what was in the array
+/**
+ *  i created the html to return everything i have in my single item(menu-item)
+ * 
+ *  i modified what was in the array.
+  */
+
 // return item
 /**looped over the array (iterated) then just said ok return the same item  */
 })
-// displayMenu = displayMenu.join("");
-// sectionCenter.innerHTML = displayMenu;
+// displayMenu = displayMenu.join(""); //VID 152.
+// sectionCenter.innerHTML = displayMenu; //VID 152
 
-//i am using the let variable which means i can OVERIDE IT(CHANGE) the displayMenu 
+/** //i am using the let variable which means i can OVERIDE IT(CHANGE) the displayMenu 
 // I ADD .join method to turn the array in the console INTO A STRING(12:34)
 // console.log(displayMenu)
 // (13:02) since i have my big giant string i now add as my DATA.(LINE 116) by using innerHTML property
 // });
 // i setup map method and i need to iterate over the items and add html and place the array of objects
 // in the html.
-// MAP METHOD lets me MODIFY MY ARRAY
+// MAP METHOD lets me MODIFY MY ARRAY*/
 
 
 // (10:10) FROM LINE 100 TO 109 I AM returning the whole hardcoded <article>
@@ -234,7 +247,7 @@ window.addEventListener("DOMContentLoaded",function (){// in the browser window 
 
 
 
-// VID.153 refactoring what is above
+// VID.153 refactoring code from vid 152.
 // i am setting up filtering to not REPEAT MYSELF i would just need to place 
 // all of the functionaility in a function in order to setup filtering
 // it would make sense if i set up the functionaility in a function.
