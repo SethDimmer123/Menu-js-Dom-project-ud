@@ -304,14 +304,16 @@ function displayMenuItems(menuItems) {
     
     // ==============================================================================================
     
-    // vid 155. FILTERING BUTTONS JS
+    // VID 155. FILTERING BUTTONS JS
+
     // NOW I NEED TO SETUP THE FUNCTIONAILITY WHEN I CLICK ON THE BUTTONS 
+
     // I DISPLAY SPECIFIC ITEMS.
     
-    // i need to select my filter buttons.
+    // i need to SELECT my filter buttons.
     
     
-    // const filterBtns = document.querySelectorAll('.filter-btn')--before VID 158. 
+    // const filterBtns = document.querySelectorAll('.filter-btn')--BEFORE VID 158. 
     const container = document.querySelector(".btn-container");// this for vid 158.
     // i selected my button container
     
@@ -321,13 +323,16 @@ function displayMenuItems(menuItems) {
    
    
   //  // filtering items
+
   //  filterBtns.forEach(function(btn){
-  //   // i am iterating over each and every button.
+
+  //   // i am ITERATING over each and every button.
+
   //   btn.addEventListener('click',function(e){
-  //     const category = e.currentTarget.dataset.id;
-  //     // current target means the button i am clicking on.
-  //     // the way the dataset property works is on the element we can add 
-  //     // a attribute with a data prefix. 
+  //     const category = e.currentTarget.dataset.id; 
+  //dataset property works is on the element we can add a attribute with a data prefix. 
+  // current target means the button i am clicking on.
+
   //     // example: line 27 in index.html. data i can call it whatever i want (id)
   //     const menuCategory = menu.filter(function(menuItem){
   //       // console.log(menuItem.category);
@@ -345,7 +350,8 @@ function displayMenuItems(menuItems) {
   //       // create a new array LINE 248
   //     })
   //     // console.log(menuCategory);
-  //     // all button down below
+
+  //     // All button down below
   //     if(category === "all"){
   //       displayMenuItems(menu)//if the category is all i will display my menu items with my MENU array
   //       // (the original array) menu line 17
@@ -372,7 +378,9 @@ function displayMenuItems(menuItems) {
   
   
   // get only unique categories- HARDEST PART
+
   // iterate over the categories return buttons
+
   // make sure to select buttons when they are available.
   
   
@@ -419,7 +427,7 @@ function displayMenuItems(menuItems) {
   
   // IN THE CONSOLE I SHOULD HAVE 10 ITEMS IN MY ARRAY BECUASE I HAVE 10 CATEGORIES
   
-  // BUT NOW I WANT TO GET UNIQUE CATEGORIES (VERY IMPORTANT)
+  // BUT NOW I WANT TO GET UNIQUE CATEGORIES (VERY IMPORTANT!!!!!)
   
   // OTHERWISE IF DISPLAY MY BUTTONS I ITERATE OVER THE CATEGORIES AND RETURN MY BUTTONS
   // THEN I WILL HAVE 10 BUTTONS
