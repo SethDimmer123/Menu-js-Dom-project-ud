@@ -226,6 +226,10 @@ window.addEventListener("DOMContentLoaded",function (){ //VID 152.
 // i start accessing the variables and properties in my object
 
 
+
+// IMPORTANT REVIEW DOWN BELOW
+
+
 // review of everything above
 
 // i have some kind of items(array of objects)
