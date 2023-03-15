@@ -139,9 +139,12 @@ window.addEventListener("DOMContentLoaded",function (){ //VID 152.
   //     btn.addEventListener('click',function(e){
   //       const category = e.currentTarget.dataset.id;
   //       // current target means the button i am clicking on.
+
   //       // the way the dataset property works is on the element we can add 
   //       // a attribute with a data prefix. 
+
   //       // example: line 27 in index.html. data i can call it whatever i want (id)
+
   //       const menuCategory = menu.filter(function(menuItem){
   //         // console.log(menuItem.category);
   //         if(menuItem.category === category) {
@@ -198,13 +201,18 @@ window.addEventListener("DOMContentLoaded",function (){ //VID 152.
 // displayMenu = displayMenu.join(""); //VID 152.
 // sectionCenter.innerHTML = displayMenu; //VID 152
 
-/** //i am using the let variable which means i can OVERIDE IT(CHANGE) the displayMenu 
+ //i am using the let variable which means i can OVERIDE IT(CHANGE) the displayMenu 
+ 
 // I ADD .join method to turn the array in the console INTO A STRING(12:34)
+
 // console.log(displayMenu)
 // (13:02) since i have my big giant string i now add as my DATA.(LINE 116) by using innerHTML property
+
 // });
+
 // i setup map method and i need to iterate over the items and add html and place the array of objects
 // in the html.
+
 // MAP METHOD lets me MODIFY MY ARRAY*/
 
 
@@ -226,14 +234,14 @@ window.addEventListener("DOMContentLoaded",function (){ //VID 152.
 
 // decide what i want to return (what kind of info)
 
-// for example the section-center specific html (line 100-109)
+// for example the section-center specific html (
 
 // then i joined everything together.join("")
 
 // then placed it in the parent element 
 // (section-center)
 
-// the i used innerHTML property (line 116)
+// then i used innerHTML property (line 116)
 
 // then i assigned it to whatever i got back once i ran the 
 // join method on my array.
@@ -298,10 +306,11 @@ function displayMenuItems(menuItems) {
     // it will be a faster setup.
     
     // for references in basic.js is the previous code from vid 152.
+
     // incase i get confused also just rewatch the vids
     
     
-    
+    // VID 154 IS IN HTML
     // ==============================================================================================
     
     // VID 155. FILTERING BUTTONS JS
@@ -330,10 +339,11 @@ function displayMenuItems(menuItems) {
 
   //   btn.addEventListener('click',function(e){
   //     const category = e.currentTarget.dataset.id; 
-  //dataset property works is on the element we can add a attribute with a data prefix. 
+  //  dataset property works is on the element we can add a attribute with a data prefix. 
   // current target means the button i am clicking on.
 
   //     // example: line 27 in index.html. data i can call it whatever i want (id)
+
   //     const menuCategory = menu.filter(function(menuItem){
   //       // console.log(menuItem.category);
   //       if(menuItem.category === category) {
@@ -400,7 +410,7 @@ function displayMenuItems(menuItems) {
   // I SETUP THE BUTTONS DYNAMICALLY IN THE DOMContentLoaded event listener.
   
   // right after i display the items displayMenuItems(menu)
-  // i setup the functionality (line 111)
+  // i setup the functionality
   
   
   // get only unique categories- HARDEST PART
