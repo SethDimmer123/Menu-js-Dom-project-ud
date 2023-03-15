@@ -5,7 +5,7 @@
 
 // i get the data
 // iterate over the data and decide what i want to display
-// decide what kind of functionaility
+// decide what kind of functionaility.
 
 // but the intial setup will be a little diffrent once i learn AJAX.
 // I WILL BE ABLE TO SETUP DATA REQUESTS AND GET DATA.
